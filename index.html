@@ -11,13 +11,12 @@
             html, body { 
                 height: 100%
                 margin: 0;
-                display: flex;
-                justify-content: center;
                 }
             
             #map {
-                height: 100vh;
+                height: 100%;
                 width: 50%;
+                position: relative;
                 }
 
             #Btnstart {
@@ -246,6 +245,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     showLoader();
     init();
+    map.invalidateSize();
 });
         </script>
         
