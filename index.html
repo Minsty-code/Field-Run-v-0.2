@@ -4,19 +4,18 @@
         <meta charset="UTF-8">
         <title>Field Run</title>
         <meta name="description"content="Site internet v.0 de l'application Field Run">
-        <link rel="icon" type="image/png" sizes="32x32" href="images">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-            <style>
-                
-            html, body { 
-                height: 100%
+        <style>
+                        body { 
                 margin: 0;
+                display: flex;
+                justify-content: center;
                 }
             
             #map {
-                height: 100%;
+                height: 100vh;
                 width: 50%;
-                position: relative;
                 }
 
             #Btnstart {
@@ -64,7 +63,7 @@
                 background: conic-gradient(black, white);   /*dégradé*/
                 opacity: calc(var(--loader-visible) * 1);  /*utilisation de la variable pour opacitée*/
                 pointer-events: none;   /*pour que ca ne bloque pas le chargement de la carte*/
-                transition: opacity 0.3s;
+                transition: opacity 0,3s;
 
                 -webkit-mask: radial-gradient(            /*masque de transparence*/
                     farthest-side,
@@ -85,14 +84,15 @@
         transform: translate(-50%, -50%) rotate(-360deg);
         }
     }
-            </style>
+        </style>
     </head>
 
     
     <body>
-        <div id="map"></div>
-        <div id="loader" class="carre"></div>
-        <div id="Btnstart" class="button">Run</div>
+        <div id="map">
+            <div id="loader" class="carre"></div>
+            <div id="Btnstart" class="button">Run</div>
+        </div>
         
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
@@ -245,10 +245,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     showLoader();
     init();
-    map.invalidateSize();
 });
         </script>
         
     </body>
 </html>
-<!--Ceci est une note-->
